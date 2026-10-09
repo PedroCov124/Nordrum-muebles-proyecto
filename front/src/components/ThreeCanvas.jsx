@@ -6,12 +6,19 @@ function ThreeCanvas(){
     const reference = useRef(null);
 
     useEffect(() =>{
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth * 0.6, window.innerHeight * 0.6);
-
         if(reference.current){
             reference.current.innerHTML = '';
         }
+
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth * 0.6, window.innerHeight * 0.6);
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth * 0.6 / window.innerHeight * 0.6, 0.1, 1000)
+        camera.position.z = 5;
+
+        renderer.render(scene, camera);
+
 
         reference.current.appendChild(renderer.domElement);
 
@@ -26,7 +33,7 @@ function ThreeCanvas(){
     }, []);
 
     return(
-        <div ref={reference} style={{backgroundColor: 'red'}}></div>
+        <div ref={reference} style={{backgroundColor: 'red', width: 'fit-content'}}></div>
     )
 }
 
