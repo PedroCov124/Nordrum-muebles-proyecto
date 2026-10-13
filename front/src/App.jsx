@@ -8,19 +8,19 @@ import ThreeCanvas from './components/ThreeCanvas'
 import NavBarPages from './components/NavBarPages'
 import Catalog from './components/Catalog'
 import Branches from './components/Branches'
+import Viewer from './components/Viewer'
+import HomePage from './components/HomePage'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <NavBarPages />
-
       <Routes>
-        <Route path='/' element={<NavBarPages />}></Route>
-        <Route path='/Catálogo' element={<Catalog />}></Route>
-        <Route path='/Sedes' element={<Branches />}></Route>
-        <Route path='/Visor' element={<Viewer />}></Route>
+        <Route path='/' element={<HomePage />}></Route>
+        <Route path='/catalogo' element={<Catalog />}></Route>
+        <Route path='/sedes' element={<Branches />}></Route>
+        <Route path='/visor' element={<Viewer />}></Route>
       </Routes>
     </>
   )
