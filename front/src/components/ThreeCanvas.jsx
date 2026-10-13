@@ -16,7 +16,7 @@ function ThreeCanvas(){
         }
 
         const renderer = new THREE.WebGLRenderer({antialias: true});
-        renderer.setSize(window.innerWidth * .6, window.innerHeight * .6);
+        renderer.setSize(window.innerWidth, window.innerHeight);
 
         const scene = new THREE.Scene();
         scene.background = new THREE.Color(0xcccccc);
