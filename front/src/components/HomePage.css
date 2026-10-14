@@ -1,0 +1,14 @@
+#imageContainer{
+    width: 96%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 8vh;
+    background-color: #27496F;
+}
+
+#imageContainer_image{
+    display: block;
+    width: 96%;
+    height: auto;
+    margin: auto;
+}
