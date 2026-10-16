@@ -1,19 +1,14 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
 import ThreeCanvas from './components/ThreeCanvas'
-import NavBarPages from './components/NavBarPages'
-import Catalog from './components/Catalog'
-import Branches from './components/Branches'
-import Viewer from './components/Viewer'
-import HomePage from './components/HomePage'
+import Catalog from './pages/Catalog'
+import Branches from './pages/Branches'
+import Viewer from './pages/Viewer'
+import HomePage from './pages/HomePage'
 import './components/basics.css'
 import './components/NavBarPages.css'
-import './components/HomePage.css'
-import Profile from './components/Profile'
+import './pages/HomePage.css'
+import Profile from './pages/Profile'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,7 +16,7 @@ function App() {
   return (
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"></link>
 
       <Routes>

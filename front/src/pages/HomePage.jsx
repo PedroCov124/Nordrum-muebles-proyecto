@@ -1,4 +1,4 @@
-import NavBarPages from "./NavBarPages";
+import NavBarPages from "../components/NavBarPages";
 
 
 function HomePage(){
