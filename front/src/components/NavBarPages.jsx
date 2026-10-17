@@ -10,7 +10,7 @@ function NavBarPages(){
             <Link to="/sedes" className="navBar_element">Sedes</Link>
             <Link to="/visor" className="navBar_element">Visor 3D</Link>
             <Link to="/profile" className="navBar_element"><img src="../../public/user.png" alt="" id="navBar_userProfile"/></Link>
-            <Link to="/signIn" className="navBar_element">Iniciar sesion</Link>
+            <Link to="/sign/in" className="navBar_element">Iniciar sesion</Link>
         </nav>
     );
 }

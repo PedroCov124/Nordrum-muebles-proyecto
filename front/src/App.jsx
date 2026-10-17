@@ -9,6 +9,7 @@ import './components/basics.css'
 import './components/NavBarPages.css'
 import './pages/HomePage.css'
 import Profile from './pages/Profile'
+import LogPage from './pages/LogPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +26,7 @@ function App() {
         <Route path='/sedes' element={<Branches />}></Route>
         <Route path='/visor' element={<Viewer />}></Route>
         <Route path='/profile' element={<Profile />}></Route>
+        <Route path='/sign/:state' element={<LogPage />}></Route>
       </Routes>
     </>
   )

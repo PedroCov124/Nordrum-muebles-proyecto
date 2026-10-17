@@ -24,8 +24,10 @@
 }
 
 
-#logo{
+a:has(#logo){
     height: 9vh;
+    width: auto;
+    display: flex;
 }
 
 

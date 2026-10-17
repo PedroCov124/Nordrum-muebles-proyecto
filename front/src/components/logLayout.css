@@ -1,0 +1,75 @@
+.formLayout{
+    width: 28%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    padding: 6rem 4rem;
+    font-family: 'Inter';
+    gap: 1rem;
+}
+
+#formLayoutUp{
+    padding: 4rem;
+}
+
+
+.formLayout *{
+    margin: 0;
+    font-size: 16px;
+}
+
+
+.formLayout h1{
+    font-size: 40px;
+    user-select: none;
+}
+
+
+#formLayout_message{
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-weight: 250;
+}
+
+#formLayout_message a{
+    font-style: normal;
+    color: #27496F;
+    text-decoration: none;
+}
+
+
+#user, #password, #email{
+    background-color: #fafafa;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, .5);
+    padding: .9rem .5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.formLayout input[type=submit]{
+    margin-top: 3rem;
+    height: 4rem;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: #1F3B5E;
+    outline: none;
+    border: none;
+}
+
+.formLayout input[type=submit]:hover{
+    background-color: #27496F;
+}
+
+#submitButtonUp{
+    margin-top: 1rem;
+}
