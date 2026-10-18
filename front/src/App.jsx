@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import ThreeCanvas from './components/ThreeCanvas'
-import Catalog from './pages/Catalog'
+import CatalogPage from './pages/CatalogPage'
 import Branches from './pages/Branches'
 import Viewer from './pages/Viewer'
 import HomePage from './pages/HomePage'
@@ -22,7 +22,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<HomePage />}></Route>
-        <Route path='/catalogo' element={<Catalog />}></Route>
+        <Route path='/catalogo' element={<CatalogPage />}></Route>
         <Route path='/sedes' element={<Branches />}></Route>
         <Route path='/visor' element={<Viewer />}></Route>
         <Route path='/profile' element={<Profile />}></Route>

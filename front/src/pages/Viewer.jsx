@@ -1,10 +1,10 @@
 import { BrowserRouter, Link, Routes } from "react-router-dom";
 import './viewer.css'
-import MenuCatalogo from '../components/MenuCatalogo.jsx'
+import Catalog from '../components/Catalog.jsx'
 
 function Viewer(){
     return(
-    <div id="viewerContainer">
+    <div id="viewerPageContainer">
         <nav id="navBar_viewer">
             <Link to="/"><img src="/public/logo_nordrum_alt.png" alt="" id="alt_logo"/></Link>
 
@@ -19,8 +19,12 @@ function Viewer(){
             <Link to="/profile"><img src="/public/user.png" alt="" id="user_image"/></Link>
         </nav>
 
-        <MenuCatalogo></MenuCatalogo>
-    </div>);
+        <div id="viewerContainer">
+            <div id="viewer"></div>
+            <Catalog />
+        </div>
+    </div>
+    );
 }
 
 

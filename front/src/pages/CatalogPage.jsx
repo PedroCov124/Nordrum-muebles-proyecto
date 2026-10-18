@@ -1,6 +1,6 @@
 import NavBarPages from "../components/NavBarPages";
 
-function Catalog(){
+function CatalogPage(){
     return(
         <div>
             <NavBarPages/>
@@ -10,4 +10,4 @@ function Catalog(){
 }
 
 
-export default Catalog
+export default CatalogPage

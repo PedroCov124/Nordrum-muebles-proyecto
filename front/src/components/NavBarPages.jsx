@@ -2,9 +2,9 @@ import { BrowserRouter, Link, Routes } from "react-router-dom";
 
 
 
-function NavBarPages(){
+function NavBarPages({id}){
     return(
-        <nav id="navBar">
+        <nav className="navBar" id={id}>
             <Link to="/" className="navBar_element"><img src="../../public/logo_nordrum.png" alt="" id="logo"/></Link>
             <Link to="/catalogo" className="navBar_element">Catálogo</Link>
             <Link to="/sedes" className="navBar_element">Sedes</Link>

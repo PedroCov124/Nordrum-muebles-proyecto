@@ -1,12 +1,14 @@
-#navBar{
+.navBar{
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 22vh;
+    height: calc(22vh - 4rem);
     width: 100%;
     box-sizing: border-box;
     padding-top: 1rem;
-    padding-bottom: 5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 4rem;
+    background-color: white;
     gap: 2.5rem;
 }
 
