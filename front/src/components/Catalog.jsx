@@ -4,9 +4,7 @@ function Catalog(){
 
     const [menu, setMenu] = useState('menu_catalog');
     const [active, setActive] = useState(1);
-    const [dropdown, setDrowdown] = useState(0);
-    //TODO: hacer el menu catalogo
-
+    
     return (
 
         <div id="catalogMenu">

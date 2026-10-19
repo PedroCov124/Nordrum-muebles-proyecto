@@ -6,7 +6,7 @@ function Viewer(){
     return(
     <div id="viewerPageContainer">
         <nav id="navBar_viewer">
-            <Link to="/"><img src="/public/logo_nordrum_alt.png" alt="" id="alt_logo"/></Link>
+            <Link to="/"><img src="/logo_nordrum_alt.png" alt="" id="alt_logo"/></Link>
 
             <div id="navBar_texts">
                 <h1>Título del diseño</h1>
@@ -16,7 +16,7 @@ function Viewer(){
                 </div>
             </div>
             
-            <Link to="/profile"><img src="/public/user.png" alt="" id="user_image"/></Link>
+            <Link to="/profile"><img src="/user.png" alt="" id="user_image"/></Link>
         </nav>
 
         <div id="viewerContainer">

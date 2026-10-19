@@ -1,7 +1,7 @@
 #imageContainer{
     width: 96%;
     height: auto;
-    margin: auto;
+    margin: 0 auto;
     margin-bottom: 8vh;
     background-color: #27496F;
 }
@@ -11,4 +11,22 @@
     width: 96%;
     height: auto;
     margin: auto;
+}
+
+
+@media screen and (max-width:1000px){
+    #imageContainer{
+        width: 90%;
+        margin-bottom: 5vh;
+    }
+
+    #imageContainer_image{
+        width: 90%;
+    }
+
+    div:has(#imageContainer){
+        height: fit-content;
+        overflow-y: scroll;
+        flex-direction: column;
+    }
 }
