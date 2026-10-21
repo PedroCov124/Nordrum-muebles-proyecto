@@ -162,3 +162,52 @@
     margin: auto;
     text-align: center;
 }
+
+
+@media screen and (max-width:1000px){
+    #profilePage{
+        flex-direction: column;
+        overflow: auto;
+    }
+
+    #profile{
+        width: auto;
+        padding-top: min(14vw, 10rem);
+        box-shadow:  0 1px 1px 0 rgba(0, 0, 0, .15);
+    }
+
+    #profile > img{
+        width: 50%;
+        margin-bottom: min(4rem, 5vw);
+    }
+
+    #profile_data button{
+        height: max(2vw, 2rem);
+        margin-top: min(1.5rem, 3vw);
+        padding: 0 max(1vw, 1.5rem);
+    }
+
+    #deleteAccount{
+        margin-top: min(3rem, 6vw);
+        margin-bottom: min(4rem, 8vw);
+    }
+
+
+    #designs{
+        padding: 6rem min(2rem, 5vw);
+    }
+
+    #designs h1{
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .designsItem{
+        width: auto;
+    }
+
+    .designsItem img {
+        height: 75%;
+    }
+}

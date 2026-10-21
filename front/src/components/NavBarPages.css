@@ -54,7 +54,7 @@ a:has(#logo){
 }
 
 
-div:has(#navBar_slideIcon){
+#slideMenuContainer{
     display: flex;
     height: max(3rem, 5vw);
     width: auto;
@@ -70,15 +70,17 @@ div:has(#navBar_slideIcon){
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 14%;
+    top: 9rem;
     right: 0%;
     width: min(50vw, 50rem);
     background-color: white;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     align-items: center;
 }
 
 #undisplayedMenu{
+    display: none;
+    visibility: none;
     animation-name: hideMenu;
     animation-duration: .3s;
     animation-fill-mode: forwards;
@@ -92,7 +94,7 @@ div:has(#navBar_slideIcon){
 @keyframes hideMenu {
     0% {
         clip-path: inset(0 0 0% 0);
-
+        display: flex;
     }
 
     99%{

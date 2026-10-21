@@ -1,13 +1,13 @@
 import { useState } from "react"
 
-function Catalog(){
+function Catalog({id}){
 
     const [menu, setMenu] = useState('menu_catalog');
     const [active, setActive] = useState(1);
     
     return (
 
-        <div id="catalogMenu">
+        <div id={id}>
             <div id="catalogMenu_buttons">
                 <p id={active == 1 ? 'active' : ''} className="catalogButton" onClick={
                     ()=> {

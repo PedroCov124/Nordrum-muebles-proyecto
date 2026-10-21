@@ -10,7 +10,7 @@ function NavBarPages({id}){
         <nav className="navBar" id={id}>
             <Link to="/" className=""><img src="../../public/logo_nordrum.png" alt="" id="logo"/></Link>
             {isMobile ? 
-                <div>
+                <div id="slideMenuContainer">
                     <img src="slideIcon.png" id="navBar_slideIcon" onClick={()=>{displayed == 0 ? setDisplay(1) : setDisplay(0)}}></img>
                     <div id={displayed == 0 ? 'undisplayedMenu' : 'displayedMenu'}>
                         <Link to="/catalogo" className="navBar_element">Catálogo</Link>

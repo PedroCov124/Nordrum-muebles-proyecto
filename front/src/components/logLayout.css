@@ -1,6 +1,6 @@
 .formLayout{
     width: 28%;
-    height: 70%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -72,4 +72,51 @@
 
 #submitButtonUp{
     margin-top: 1rem;
+}
+
+
+@media screen and (max-width:1000px) {
+    .formLayout{
+        width: 90%;
+        top: 55%;
+        padding: min(6rem, 20vw) min(4rem, 13vw);
+    }
+
+    #formLayout_message{
+        margin-bottom: min(2rem, 4vw);
+        font-size: 14px;
+    }
+
+    #formLayout_message a{
+        margin-bottom: min(2rem, 4vw);
+        font-size: 14px;
+    }
+
+    .formLayout input[type=submit]{
+        margin-top: min(3rem, 5vw);
+    }
+
+    #user, #password, #email{
+        padding: min(.9rem, 2vw) .5rem;
+    }
+
+    .formLayout input[type=submit]{
+        margin-top: 3rem;
+        height: min(4rem, 12vw);
+        font-size: 18px;
+    }
+
+    #formLayoutUp{
+        padding: min(4rem, 8vw);
+    }
+}
+
+@media screen and (max-width:400px){
+    .formLayout h1{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-height:750px) {
+    
 }
