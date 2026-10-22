@@ -2,9 +2,10 @@ import {useRef, useEffect} from 'react';
 import * as THREE from 'three';
 import { MTLLoader} from 'three/addons/loaders/MTLLoader.js';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
-import { PointerLockControls } from 'three/addons/controls/PointerLockControls.js';
+import { FlyControls } from 'three/addons/controls/FlyControls.js';
 import { loadObject } from '../utils/objectLoader';
 import { cleanScene } from '../utils/cleanScene';
+import { cameraMovement, cameraRotation } from '../utils/cameraMovement'
 
 
 function ThreeCanvas(){
@@ -31,22 +32,26 @@ function ThreeCanvas(){
         loadObject("guitar chair", scene);
         loadObject("80s pool chair", scene);
 
-        const controls = new PointerLockControls(camera, renderer.domElement);
-
+        
+        cameraRotation(camera, renderer.domElement);
+        const cMovement = cameraMovement(camera);
         //TODO: agregar el movimiento con las teclas
         //TODO: modularizar un poco más la funcion useEffect
         //TODO: modificar la funcion loadObject para normalizar los tamaños de los modelos
-        renderer.domElement.addEventListener('click', () =>{
-            controls.lock();
-        })
+        
         
         
         var animationID;
-        const animar = () => {
-            animationID = requestAnimationFrame(animar);
+        const clock = new THREE.Timer();
+
+        const animate = () => {
+            animationID = requestAnimationFrame(animate);
+
+            cMovement.updateMovement();
+
             renderer.render(scene, camera);
         };
-        animar();
+        animate();
 
         reference.current.appendChild(renderer.domElement);
 
