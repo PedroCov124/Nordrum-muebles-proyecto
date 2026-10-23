@@ -1,8 +1,5 @@
 import {useRef, useEffect} from 'react';
 import * as THREE from 'three';
-import { MTLLoader} from 'three/addons/loaders/MTLLoader.js';
-import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
-import { FlyControls } from 'three/addons/controls/FlyControls.js';
 import { loadObject } from '../utils/objectLoader';
 import { cleanScene } from '../utils/cleanScene';
 import { cameraMovement, cameraRotation } from '../utils/cameraMovement'
@@ -16,28 +13,28 @@ function ThreeCanvas(){
             reference.current.innerHTML = '';
         }
 
+        const worldObjects = [];
+
         const renderer = new THREE.WebGLRenderer({antialias: true});
-        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setSize(window.innerWidth *.6, window.innerHeight * .6);
 
         const scene = new THREE.Scene();
         scene.background = new THREE.Color(0xcccccc);
         const camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 0.1, 1000)
         camera.position.z = 5;
-        camera.position.y = 1;
+        camera.position.y = 1.8;
 
         const ambientLight = new THREE.AmbientLight(0xffffff, 1);
         scene.add(ambientLight);
 
 
-        loadObject("guitar chair", scene);
-        loadObject("80s pool chair", scene);
-
+        loadObject("guitar chair", scene, worldObjects);
+        loadObject("greydon desk", scene, worldObjects);
+        loadObject("asymmetric modern shelf", scene, worldObjects);
         
         cameraRotation(camera, renderer.domElement);
         const cMovement = cameraMovement(camera);
-        //TODO: agregar el movimiento con las teclas
         //TODO: modularizar un poco más la funcion useEffect
-        //TODO: modificar la funcion loadObject para normalizar los tamaños de los modelos
         
         
         

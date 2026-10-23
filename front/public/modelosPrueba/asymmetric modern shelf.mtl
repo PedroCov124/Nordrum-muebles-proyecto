@@ -1,0 +1,12 @@
+# Blender 5.0.1 MTL File: 'book shelf.blend'
+# www.blender.org
+
+newmtl wood
+Ka 0.200000 0.200000 0.200000
+Ks 0.200000 0.200000 0.200000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd -s 3 3 3 C:/wood-diffuse_124.jpg
+map_Ns -s 3 3 3 C:/wood-smooth_124.jpg

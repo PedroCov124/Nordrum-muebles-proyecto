@@ -1,9 +1,10 @@
 import * as THREE from 'three';
 import { MTLLoader} from 'three/addons/loaders/MTLLoader.js';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+import { normalizeObjectSize } from './normalizeSizes';
 
 
-export async function loadObject(fileName, scene){
+export async function loadObject(fileName, scene, objectList){
     const mtlLoader = new MTLLoader();
     const objLoader = new OBJLoader();
 
@@ -12,5 +13,6 @@ export async function loadObject(fileName, scene){
 
     const object = await objLoader.loadAsync(`/modelosPrueba/${fileName}.obj`);
 
+    normalizeObjectSize(object, objectList);
     scene.add(object);
 }

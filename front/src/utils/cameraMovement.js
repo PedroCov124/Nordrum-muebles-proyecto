@@ -12,10 +12,10 @@ export function cameraRotation(camera, renderer){
 export function cameraMovement(camera){
     var locked = false;
     var keys = {
-        w: {pressed: false, speed: -0.2},
-        a: {pressed: false, speed: -0.2},
-        s: {pressed: false, speed: 0.2},
-        d: {pressed: false, speed: 0.2}
+        w: {pressed: false, speed: -0.05},
+        a: {pressed: false, speed: -0.05},
+        s: {pressed: false, speed: 0.05},
+        d: {pressed: false, speed: 0.05}
     }
     console.log(keys['w'].pressed)
 
@@ -24,26 +24,13 @@ export function cameraMovement(camera){
         
         if (locked){
             document.addEventListener('keydown', handleKeyHold);
-            document.addEventListener('keyup', handleKeyUp)
+            document.addEventListener('keyup', handleKeyUp);
         } else{
             document.removeEventListener('keydown', handleKeyHold);
-            document.removeEventListener('keyup', handleKeyUp)
+            document.removeEventListener('keyup', handleKeyUp);
         }
     })
 
-    const cameraMovementLock = (e)=>{
-        
-        for (let k in keys){
-            if (e.key === k){
-                keys[k].pressed = !keys[k].pressed;
-            }
-        }
-
-        console.log(keys)
-    }
-
-    let intervalo;
-    
     const handleKeyHold = (e)=>{
         let pressedKey = e.key.toLowerCase();
 
@@ -59,11 +46,13 @@ export function cameraMovement(camera){
     const updateMovement = ()=>{
         for (let k in keys){
             if ((k.toString() === 'w' || k.toString() === 's') && keys[k].pressed){
-                camera.position.z += keys[k].speed;
+                camera.translateZ(keys[k].speed);
             } else if ((k.toString() === 'a' || k.toString() === 'd') && keys[k].pressed){
-                camera.position.x += keys[k].speed;
+                camera.translateX(keys[k].speed);
             }
         }
+
+        camera.position.y = 1.8;
     }
 
     return {updateMovement}
