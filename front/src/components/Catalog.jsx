@@ -1,4 +1,5 @@
 import { useState } from "react"
+import PlaceHolder from '../assets/place_holder.png'
 
 function Catalog({id}){
 
@@ -54,30 +55,30 @@ function Catalog({id}){
                 //TODO: Reemplazar ambos menus por su correspondiente de la base de datos
                 <ul id="catalog">
                     <li>
-                        <img src="/place_holder.png" alt="" />
+                        <img src={PlaceHolder} alt="" />
                         <p>Mueble</p>
                     </li>
                     <li>
-                        <img src="/place_holder.png" alt="" />
+                        <img src={PlaceHolder}alt="" />
                         <p>Mueble</p>
                     </li>
                     <li>
-                        <img src="/place_holder.png" alt="" />
+                        <img src={PlaceHolder} alt="" />
                         <p>Mueble</p>
                     </li>
                     <li>
-                        <img src="/place_holder.png" alt="" />
+                        <img src={PlaceHolder} alt="" />
                         <p>Mueble</p>
                     </li>
                     <li>
-                        <img src="/place_holder.png" alt="" />
+                        <img src={PlaceHolder} alt="" />
                         <p>Mueble</p>
                     </li>
                 </ul>
                 : 
                 <ul id="catalog">
                     <li>
-                        <img src="/place_holder.png" alt="" />
+                        <img src={PlaceHolder} alt="" />
                         <p>Mueble</p>
                     </li>
                 </ul>

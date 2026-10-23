@@ -4,13 +4,14 @@ import LogInLayout from "../components/LogInLayout";
 import SignUpLayout from "../components/SignUpLayout";
 import { BrowserRouter, Link, Routes } from "react-router-dom";
 import './logPage.css'
+import Logo from '../assets/logo_nordrum.png'
 
 function LogPage(){
     const { state } = useParams(); 
 
     return (
         <div id="logPageContainer">
-            <Link to="/"><img src="/logo_nordrum.png" alt="" id="logoLogPage"/></Link>
+            <Link to="/"><img src={Logo} alt="" id="logoLogPage"/></Link>
             {state == 'in' ? <LogInLayout/> : <SignUpLayout/>}
         </div>
     )

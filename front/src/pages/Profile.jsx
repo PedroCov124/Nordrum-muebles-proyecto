@@ -1,5 +1,7 @@
 import NavBarPages from "../components/NavBarPages";
 import './profile.css'
+import User from '../assets/user.png'
+import PlaceHolder from '../assets/place_holder.png'
 
 function Profile(){
     return(
@@ -8,7 +10,7 @@ function Profile(){
             
             <div id="profilePage">
                 <div id="profile">
-                    <img src="user.png" alt="" />
+                    <img src={User} alt="" />
 
                     <span className="divisionLine"></span>
 
@@ -31,19 +33,19 @@ function Profile(){
                     
                     <ul id="designsContainer">
                         <li className="designsItem">
-                            <img src="place_holder.png" alt="" />
+                            <img src={PlaceHolder} alt="" />
                             <div>
                                 <p>Diseño</p>
                             </div>
                         </li>
                         <li className="designsItem">
-                            <img src="place_holder.png" alt="" />
+                            <img src={PlaceHolder} alt="" />
                             <div>
                                 <p>Diseño</p>
                             </div>
                         </li>
                         <li className="designsItem">
-                            <img src="place_holder.png" alt="" />
+                            <img src={PlaceHolder} alt="" />
                             <div>
                                 <p>Diseño</p>
                             </div>

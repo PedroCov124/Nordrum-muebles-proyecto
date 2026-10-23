@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { BrowserRouter, Link, Routes } from "react-router-dom";
+import SlideIcon from '../assets/slideIcon.png'
+import User from '../assets/user.png'
+import Logo from '../assets/logo_nordrum.png'
 
 
 function NavBarPages({id}){
@@ -8,15 +11,15 @@ function NavBarPages({id}){
 
     return(
         <nav className="navBar" id={id}>
-            <Link to="/" className=""><img src="../../public/logo_nordrum.png" alt="" id="logo"/></Link>
+            <Link to="/" className=""><img src={Logo} alt="" id="logo"/></Link>
             {isMobile ? 
                 <div id="slideMenuContainer">
-                    <img src="slideIcon.png" id="navBar_slideIcon" onClick={()=>{displayed == 0 ? setDisplay(1) : setDisplay(0)}}></img>
+                    <img src={SlideIcon} id="navBar_slideIcon" onClick={()=>{displayed == 0 ? setDisplay(1) : setDisplay(0)}}></img>
                     <div id={displayed == 0 ? 'undisplayedMenu' : 'displayedMenu'}>
                         <Link to="/catalogo" className="navBar_element">Catálogo</Link>
                         <Link to="/sedes" className="navBar_element">Sedes</Link>
                         <Link to="/visor" className="navBar_element">Visor 3D</Link>
-                        <Link to="/profile" className="navBar_element"><img src="../../public/user.png" alt="" id="navBar_userProfile"/></Link>
+                        <Link to="/profile" className="navBar_element"><img src={User} alt="" id="navBar_userProfile"/></Link>
                         <Link to="/sign/in" className="navBar_element">Iniciar sesion</Link>
                     </div>
                 </div> :
@@ -24,7 +27,7 @@ function NavBarPages({id}){
                     <Link to="/catalogo" className="navBar_element">Catálogo</Link>
                     <Link to="/sedes" className="navBar_element">Sedes</Link>
                     <Link to="/visor" className="navBar_element">Visor 3D</Link>
-                    <Link to="/profile" className="navBar_element"><img src="../../public/user.png" alt="" id="navBar_userProfile"/></Link>
+                    <Link to="/profile" className="navBar_element"><img src={User} alt="" id="navBar_userProfile"/></Link>
                     <Link to="/sign/in" className="navBar_element">Iniciar sesion</Link>
                 </div>
             }
